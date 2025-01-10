@@ -1,9 +1,9 @@
-// Referencias a los elementos del DOM
+// Referencias del DOM
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskContainer = document.getElementById("taskContainer");
 
-// Función para agregar una tarea
+// agregar una tarea
 addButton.addEventListener("click", () => {
     const taskText = taskInput.value.trim();
 
@@ -28,12 +28,12 @@ addButton.addEventListener("click", () => {
     });
     taskItem.appendChild(deleteButton);
 
-    // Marcar como completada al hacer clic
+    // Marcar como completada
     taskSpan.addEventListener("click", () => {
         taskItem.classList.toggle("completed");
     });
 
-    // Agregar la tarea a la lista
+    // Agregar la tarea
     taskContainer.appendChild(taskItem);
 
     // Limpiar el campo de entrada
